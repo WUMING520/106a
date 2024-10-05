@@ -19,30 +19,29 @@
 
 <body>
   <!-- 登录界面 -->
-  <div class="m-pc-resetBg" glue-component="page.userOpt.component.router" glue-id="switcher">
+  <div class="m-pc-resetBg">
     
     <!-- 返回按钮 -->
-    <section class="m-goBack" glue-component="page.userOpt.component.goback" glue-id="goBack">
-      <a data-node="goBack" class="c-link" href="javascript:void(0);"><i class="c-glyphicon c-glyphicon-arrowLeft"></i></a>
+    <section class="m-goBack">
+      <a class="c-link" href="javascript:void(0);"><i class="c-glyphicon c-glyphicon-arrowLeft"></i></a>
     </section>
 
     <!-- 登录表单 -->
-    <div glue-node="view"></div>
-    <script glue-node="baseLogin" type="text/velocity">
+    <div>
       <div class="m-pc-title-sms">
-        <h3 class="title" glue-component="page.userOpt.component.title">登录爱奇艺</h3>
+        <h3 class="title">登录爱奇艺</h3>
       </div>
 
       <form>
         <section class="m-loginNew">
-          <div data-component="page.userOpt.component.baseLogin" glue-id="viewId">
+          <div>
             <!-- 手机号输入框 -->
-            <div glue-component="page.userOpt.component.username">
+            <div>
               <div class="largest">
                 <div class="input_wrap detial-info">
                   <div class="address-selection">
                     <i class="c-glyphicon c-glyphicon-arrowDown"></i>
-                    <select class="elect-area" data-node="area"></select>
+                    <select class="elect-area"></select>
                   </div>
                   <div class="wrap-info">
                     <input class="input-block enterNumber inputH" id="phoneNumber" name="phoneNumber" type="text" placeholder="请输入手机号">
@@ -52,10 +51,10 @@
             </div>
 
             <!-- 密码输入框 -->
-            <div class="largest" glue-component="page.userOpt.component.password">
+            <div class="largest">
               <div class="input_wrap detial-info input-buttom-new">
-                <input data-node="password" class="input-block enterNumber" placeholder="请输入密码" type="password">
-                <a class="tip_icon" data-node="showpwdModel" style="display: none;" href="javascript:void(0);">
+                <input class="input-block enterNumber" placeholder="请输入密码" type="password">
+                <a class="tip_icon" href="javascript:void(0);">
                   <i class="c-glyphicon c-glyphicon-eye"></i>
                 </a>
               </div>
@@ -63,29 +62,29 @@
 
             <!-- 忘记密码链接 -->
             <div class="m-tips-link">
-              <a class="c-tips-link" data-node="forgetPwd" href="javascript:void(0);">忘记密码</a>
+              <a class="c-tips-link" href="javascript:void(0);">忘记密码</a>
             </div>
 
             <!-- 登录按钮 -->
-            <div class="btnWrap" id="baselogin-loginbtn">
-              <a class="c-btn-block c-btn-base" data-node="loginBtn" href="javascript:void(0);">登录爱奇艺</a>
+            <div class="btnWrap">
+              <a class="c-btn-block c-btn-base" href="javascript:void(0);">登录爱奇艺</a>
             </div>
 
             <!-- 其他登录方式 -->
-            <div class="m-loginWay-new selected" glue-show="otherLoginShow==1">
-              <a class="account" href="javascript:void(0)" data-node="smsLogin">短信登录</a>
-              <div class="thirdIcon" glue-component="page.userOpt.component.thirdIcon">
-                <img class="otherWay weixinClass" data-node="weixin" src="//pic0.iqiyipic.com/lequ/20240426/1ad403cd36e249368b7649ef658ee668.png" alt="微信登录">
-                <img class="otherWay QQClass" data-node="qq" src="//pic2.iqiyipic.com/lequ/20240426/0eb89fed8e3a4d65abfb8f7a52edb8d5.png" alt="QQ登录">
-                <img class="otherWay weiboClass" data-node="sina" src="//pic0.iqiyipic.com/lequ/20240426/08badc1537d74e72b8b86dfa8df0d278.png" alt="微博登录">
-                <img class="otherWay baiduClass" data-node="baidu" src="//pic0.iqiyipic.com/lequ/20240426/4963b86b25e84349883511c968ffeddf.png" alt="百度登录">
+            <div class="m-loginWay-new selected">
+              <a class="account" href="javascript:void(0)">短信登录</a>
+              <div class="thirdIcon">
+                <img class="otherWay weixinClass" src="//pic0.iqiyipic.com/lequ/20240426/1ad403cd36e249368b7649ef658ee668.png" alt="微信登录">
+                <img class="otherWay QQClass" src="//pic2.iqiyipic.com/lequ/20240426/0eb89fed8e3a4d65abfb8f7a52edb8d5.png" alt="QQ登录">
+                <img class="otherWay weiboClass" src="//pic0.iqiyipic.com/lequ/20240426/08badc1537d74e72b8b86dfa8df0d278.png" alt="微博登录">
+                <img class="otherWay baiduClass" src="//pic0.iqiyipic.com/lequ/20240426/4963b86b25e84349883511c968ffeddf.png" alt="百度登录">
               </div>
             </div>
 
           </div>
         </section>
       </form>
-    </script>
+    </div>
   </div>
 </body>
 </html>
