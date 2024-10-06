@@ -2,38 +2,72 @@
 <html lang="en">
 
 <head>
-  <!-- 设置网页字符编码和语言环境 -->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta http-equiv="content-language" lang="zh-CN"/>
-
-  <!-- 设置视口属性，使网页在移动设备上自适应 -->
-  <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-  <meta name="format-detection" content="telephone=no">
-
-  <!-- 页面标题 -->
-  <title>爱奇艺登录</title>
-
-  <!-- 外部样式表链接 -->
-  <link type="text/css" href="//static.iqiyi.com/lequ/20240514/h5-pc.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录爱奇艺</title>
+    <link rel="stylesheet" href="//static.iqiyi.com/lequ/20240514/h5-pc.css">
 </head>
 
 <body>
-  <!-- 登录界面 -->
-  <div class="m-pc-resetBg">
-    
-    <!-- 返回按钮 -->
-    <section class="m-goBack">
-      <a class="c-link" href="javascript:void(0);"><i class="c-glyphicon c-glyphicon-arrowLeft"></i></a>
-    </section>
+    <div class="login-container">
+        <h3>登录爱奇艺</h3>
+        
+        <!-- 手机号输入 -->
+        <div class="phone-input">
+            <label for="phone">+86</label>
+            <input type="tel" id="phone" placeholder="输入手机号">
+            <span id="phoneError" style="display: none; color: red;">手机号格式错误，请重新输入</span>
+        </div>
 
-    <!-- 登录表单 -->
-    <div>
-      <div class="m-pc-title-sms">
-        <h3 class="title">登录爱奇艺</h3>
-      </div>
+        <!-- 阅读协议 -->
+        <div class="agreement-link">
+            <a class="c-check-link"><i class="c-glyphicon c-glyphicon-checkbox"></i></a>
+            阅读并同意<a class="c-link" href="#">《用户协议》</a>和<a class="c-link" href="#">《隐私政策》</a>
+        </div>
 
-      <form>
-        <section class="m-loginNew">
+        <!-- 验证码输入 -->
+        <div class="code-input">
+            <label for="code">请输入验证码</label>
+            <input type="text" id="code" maxlength="6">
+            <button class="get-code-btn" id="getCode">获取验证码</button>
+            <span id="resendInfo" style="display: none;">1-60s后重新发</span>
+        </div>
+
+        <!-- 密码登录 -->
+        <div class="login-options">
+            <a href="#">密码登录</a>
+        </div>
+
+        <!-- 第三方登录 -->
+        <div class="third-party-login">
+            <h4>使用以下方式登录</h4>
+            <img class="third-party-icon weibo" src="//pic0.iqiyipic.com/lequ/20240426/08badc1537d74e72b8b86dfa8df0d278.png" alt="微博">
+            <img class="third-party-icon qq" src="//pic2.iqiyipic.com/lequ/20240426/0eb89fed8e3a4d65abfb8f7a52edb8d5.png" alt="QQ">
+            <img class="third-party-icon baidu" src="//pic0.iqiyipic.com/lequ/20240426/4963b86b25e84349883511c968ffeddf.png" alt="百度">
+        </div>
+    </div>
+
+    <script>
+        // 示例JavaScript代码 - 可根据需求进行扩展
+        document.getElementById("getCode").addEventListener("click", function () {
+            document.getElementById("resendInfo").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("resendInfo").style.display = "none";
+            }, 60000); // 1分钟后隐藏
+        });
+
+        document.getElementById("phone").addEventListener("input", function () {
+            var phonePattern = /^[1][3-9][0-9]{9}$/;
+            if (!phonePattern.test(this.value)) {
+                document.getElementById("phoneError").style.display = "block";
+            } else {
+                document.getElementById("phoneError").style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
           <div>
             <!-- 手机号输入框 -->
             <div>
